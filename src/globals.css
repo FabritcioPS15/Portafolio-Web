@@ -1,0 +1,65 @@
+/* Añade esto a tus estilos globales */
+body {
+  cursor: auto !important; /* Permitimos el cursor nativo cuando sea necesario */
+}
+
+body.neon-cursor-active {
+  cursor: none !important;
+}
+
+.cursor-neon {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(94, 234, 212, 0.7);
+  box-shadow: 0 0 10px rgba(94, 234, 212, 0.8), 0 0 20px rgba(94, 234, 212, 0.6);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: 
+    transform 0.15s ease,
+    width 0.15s ease,
+    height 0.15s ease,
+    background 0.3s ease,
+    opacity 0.3s ease;
+  mix-blend-mode: screen;
+  opacity: 0; /* Inicialmente oculto */
+}
+
+.cursor-neon::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-neon.hover-effect {
+  transform: translate(-50%, -50%) scale(1.5);
+  background: rgba(59, 130, 246, 0.7);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.8), 0 0 30px rgba(59, 130, 246, 0.6);
+}
+
+.cursor-click-effect {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid rgba(94, 234, 212, 0.8);
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  box-shadow: 0 0 15px rgba(94, 234, 212, 0.5), inset 0 0 10px rgba(94, 234, 212, 0.3);
+}
+
+/* Clase para elementos editables */
+.allow-native-cursor {
+  cursor: auto !important;
+}
