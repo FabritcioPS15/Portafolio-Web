@@ -1,4 +1,4 @@
-import favicon from "src/Components/Logos con Iniciales para Nombre Sencillo Tipográfico Circular Blanco y Negro.svg";
+import favicon from "src/Components/logoinicial.svg";
 import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, Github, Linkedin, Mail, ChevronDown, Code, Briefcase, User, Coffee, Star, ExternalLink, Quote, Download, Phone, ArrowUp, MessageCirclePlus, MessageSquarePlus  } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -121,7 +121,7 @@ function App() {
     {
       title: "Portal de TalenThree",
       description: "TalentThre es una plataforma web enfocada en ofrecer servicios de asesoría y capacitación online. A través de un entorno accesible y profesional, brindamos cursos especializados y acompañamiento personalizado, diseñados para fortalecer las habilidades y competencias de nuestros usuarios, impulsando su desarrollo personal y profesional.",
-      image: "src/Components/sscTT.png",
+      image: "src/Components/ssctt.png",
       tech: ["WordPress", "WooComercee", "PHP"],
       featured: true
     },
@@ -242,86 +242,76 @@ function App() {
     opacity: 1,
     transition: { duration: 0.5 }
   }}
-  className={`fixed top-4 left-4 -translate-x-1/2 z-50  
-    w-[95%] max-w-7xl px-4 py-2  
+  className={`fixed top-3 left-6 -translate-x-1/2 z-50  
+    w-[90%] max-w-6xl px-4 py-1  
     rounded-3xl  
     border-2 transition-all duration-300 ease-out  
-
- ${isScrolled ? 'bg-slate-900 border-cyan-300' : 'bg-slate-800/20 border-gray-800'}  
+    ${isScrolled ? 'bg-slate-900 border-cyan-300' : 'bg-slate-800/20 border-gray-800'}  
     hover:border-cyan-500  
     hover:shadow-[0_0_15px_2px_rgba(34,211,238,0.7)]  
     hover:shadow-cyan-400/50  
     backdrop-blur-lg  
-    shadow-xl 
-    sm:w-[95%] sm:px-3 sm:py-2 sm:top-2 sm:left-90 lg:w-[90%] lg:px-2 lg:py-1 lg:top-4 lg:left-40`}
-  >
-  
-  <div className="w-full flex items-center justify-between h-16">
-  <div className="flex items-center space-x-2 md:space-x-3">
-  {/* Imagen del logo */}
-  <motion.img
-    src="src/Components/logofjpsblanco.svg"
-    alt="Logo"
-    className="h-8 w-8 md:h-10 md:w-10 object-contain"
-    initial={{ opacity: 0, scale: 0.8 }}
-    animate={{ 
-        opacity: 1, 
-        scale: 1.2,
-        filter: "drop-shadow(0 0 2px rgba(255, 255, 255, 0.7))" // Brillo base
-    }}
-    whileHover={{ 
-        scale: 1.4,
-        rotate: [0, 5, -5, 0],
-        filter: [
-            "drop-shadow(0 0 2px #ffffff)",
-            "drop-shadow(0 0 5px #ffffff)",
-            "drop-shadow(0 0 10px #ffffff)",
-            "drop-shadow(0 0 15px #ffffff)",
-            "drop-shadow(0 0 10px #ffffff)",
-            "drop-shadow(0 0 5px #ffffff)"
-        ], // Efecto de parpadeo neón
-        boxShadow: "0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff" // Brillo adicional
-    }}
-    transition={{
-        opacity: { duration: 0.5 },
-        scale: { type: "spring", stiffness: 300, damping: 10 },
-        rotate: { duration: 0.5 },
-        filter: { duration: 0.3, repeat: Infinity, repeatType: "reverse" } // Animación de parpadeo
-    }}
-/>
+    shadow-xl sm:w-[95%] sm:px-3 sm:py-2 sm:top-2 sm:left-90 lg:w-[90%] lg:px-2 lg:py-1 lg:top-4 lg:left-20`}
 
-  {/* Texto PORTFOLIO con efectos */}
-  <motion.div
-    className="text-3xl md:text-3xl text-transparent cursor-pointer select-none"
-    style={{
-      fontFamily: "'Audiowide', sans-serif",
-      letterSpacing: "0.1em",
-      background: "linear-gradient(90deg, #00F0FF 0%, #00FF6C 100%)",
-      WebkitBackgroundClip: "text",
-      backgroundClip: "text",
-      textShadow: "0 0 8px rgba(0, 240, 255, 0.4)",
-      fontWeight: 400
-    }}
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    whileHover={{
-      scale: 1.03,
-      letterSpacing: "0.12em",
-      textShadow: "0 0 12px rgba(0, 240, 255, 0.8)"
-    }}
-    whileTap={{ 
-      scale: 0.97 
-    }}
-    transition={{
-      type: "spring",
-      stiffness: 300,
-      damping: 10
-    }}
-  >
-    PORTFOLIO
-  </motion.div>
-</div>
-    {/* Menú Desktop */}
+>
+  
+  <div className="w-full flex items-center justify-between h-12">
+    <div className="flex items-center space-x-2">
+      {/* Logo más pequeño */}
+      <motion.img
+        src="src/Components/logofjpsblanco.svg"
+        alt="Logo"
+        className="h-6 w-6 md:h-8 md:w-8 object-contain"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ 
+            opacity: 1, 
+            scale: 1.1,
+            filter: "drop-shadow(0 0 2px rgba(255, 255, 255, 0.7))"
+        }}
+        whileHover={{ 
+            scale: 1.3,
+            rotate: [0, 5, -5, 0],
+            filter: [
+                "drop-shadow(0 0 2px #ffffff)",
+                "drop-shadow(0 0 5px #ffffff)"
+            ]
+        }}
+        transition={{
+            opacity: { duration: 0.5 },
+            scale: { type: "spring", stiffness: 300, damping: 10 },
+            rotate: { duration: 0.5 }
+        }}
+      />
+
+      {/* Texto PORTFOLIO más compacto */}
+      <motion.div
+        className="text-xl md:text-2xl text-transparent cursor-pointer select-none"
+        style={{
+          fontFamily: "'Audiowide', sans-serif",
+          letterSpacing: "0.1em",
+          background: "linear-gradient(90deg, #00F0FF 0%, #00FF6C 100%)",
+          WebkitBackgroundClip: "text",
+          backgroundClip: "text",
+          textShadow: "0 0 8px rgba(0, 240, 255, 0.4)",
+          fontWeight: 400
+        }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        whileHover={{
+          scale: 1.03,
+          letterSpacing: "0.12em"
+        }}
+        transition={{
+          type: "spring",
+          stiffness: 300,
+          damping: 10
+        }}
+      >
+        PORTFOLIO
+      </motion.div>
+    </div>
+
+    {/* Menú Desktop más compacto */}
     <motion.div 
       className="hidden md:block"
       style={{ fontFamily: "'Audiowide', sans-serif" }}
@@ -332,7 +322,7 @@ function App() {
         transition: { delay: 0.3 }
       }}
     >
-      <div className="flex items-center gap-6">
+      <div className="flex items-center gap-4">
         <NavLink href="#home" active={activeSection === 'home'}>Inicio</NavLink>
         <NavLink href="#about" active={activeSection === 'about'}>Sobre Mí</NavLink>
         <NavLink href="#projects" active={activeSection === 'projects'}>Proyectos</NavLink>
@@ -348,12 +338,12 @@ function App() {
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         className="text-gray-300 hover:text-white transition-colors"
       >
-        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
       </motion.button>
     </div>
   </div>
 
-  {/* Menú móvil */}
+  {/* Menú móvil más compacto */}
   <AnimatePresence>
     {isMenuOpen && (
       <motion.div 
@@ -364,20 +354,19 @@ function App() {
         transition={{ duration: 0.3, ease: "easeInOut" }}
         className="md:hidden glass-card overflow-hidden"
       >
-        <div className="px-2 pt-2 pb-3 space-y-1">
-          {['home', 'about', 'projects', 'testimonials', 'contact'].map((section) => (
+        <div className="px-2 pt-1 pb-2 space-y-1">
+          {['home', 'about', 'projects','testimonials', 'contact'].map((section) => (
             <motion.a
               key={section}
               href={`#${section}`}
               onClick={() => setIsMenuOpen(false)}
-              whileHover={{ x: 10, backgroundColor: 'rgba(73, 170, 157, 0.1)' }}
-              className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 ${
+              whileHover={{ x: 5, backgroundColor: 'rgba(73, 170, 157, 0.1)' }}
+              className={`block px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                 activeSection === section 
                   ? 'text-teal-400 bg-slate-700/50' 
                   : 'text-gray-300 hover:text-white hover:bg-slate-700/30'
               }`}
             >
-              {/* Textos traducidos manteniendo las IDs originales */}
               {section === 'home' && 'Inicio'}
               {section === 'about' && 'Sobre Mí'}
               {section === 'projects' && 'Proyectos'}
@@ -388,7 +377,7 @@ function App() {
         </div>
       </motion.div>
     )}
-</AnimatePresence>
+  </AnimatePresence>
 </motion.nav>
 
       {/* Hero Section */}
@@ -400,7 +389,7 @@ function App() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3 }}
-      className="inline-flex items-center gap-2 px-3 py-1 md:px-4 md:py-2 bg-slate-800/50 border border-teal-400/30 rounded-full mb-4 md:mb-6"
+      className="inline-flex items-center gap-2 px-2 py-1 md:px-6 md:py-2 bg-slate-800/50 border border-teal-400/30 rounded-full mb-4 md:mb-6"
     >
       <motion.div 
         animate={{ scale: [1, 1.2, 1] }}
@@ -471,7 +460,7 @@ function App() {
       animate={{ opacity: 1, y: 0 }}
       style={{ fontFamily: "'Audiowide', sans-serif" }}
       transition={{ duration: 0.8, delay: 0.4 }}
-      className="flex flex-col items-center gap-4 md:gap-8"
+      className="flex flex-col items-center gap-4 md:gap-4"
     >
       <div className="flex flex-wrap justify-center gap-4 md:gap-6">
         <SocialLink href="https://github.com/FabritcioPS15" icon={<Github size={24} className="md:size-7" />} label="GitHub" />
@@ -487,7 +476,7 @@ function App() {
           onClick={handleDownloadCV}
           className="flex items-center gap-1 md:gap-2 px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-teal-400 to-blue-500 rounded-full hover:opacity-90 transition-all duration-300 shadow-lg shadow-teal-400/20 text-sm md:text-base"
         >
-          <Download size={20} className="md:size-8" />
+          <Download size={20} className="md:size-6" />
           <span>Descargar CV</span>
         </motion.button>
         
@@ -495,9 +484,9 @@ function App() {
           href="#projects"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="flex items-center gap-1 md:gap-2 px-4 py-2 md:px-6 md:py-3 border border-teal-400 text-teal-400 hover:bg-teal-400/10 rounded-full transition-all duration-300 text-sm md:text-base"
+          className="flex items-center gap-1 md:gap-2 px-4 py-2 md:px-4 md:py-1 border border-teal-400 text-teal-400 hover:bg-teal-400/10 rounded-full transition-all duration-300 text-sm md:text-base"
         >
-          <Code size={20} className="md:size-8" />
+          <Code size={20} className="md:size-6" />
           <span>Ver Proyectos</span>
         </motion.a>
       </div>
@@ -551,7 +540,7 @@ function App() {
         repeat: Infinity,
         ease: "easeInOut"
       }}
-      className="text-gray-400 mb-2"
+      className="text-gray-400 mb-1"
     >
       <ChevronDown size={10} />
     </motion.div>
@@ -596,7 +585,7 @@ function App() {
                   };
                 }
               }}
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-teal-400 text-white shadow-lg hover:bg-teal-500 transition-all duration-300"
+              className="flex items-center justify-center w-12 h-8 rounded-full bg-teal-400 text-white shadow-lg hover:bg-teal-500 transition-all duration-300"
               style={{
                 boxShadow: '0 0 15px rgba(45, 212, 191, 0.5)'
               }}
@@ -635,10 +624,10 @@ function App() {
             >
               <h3 className="text-3xl font-bold text-teal-400">¡Hola! Soy Fabritcio Peña</h3>
               <p className="text-gray-300 leading-relaxed">
-                Con más de 1 año de experiencia en desarrollo web, me apasiona crear experiencias digitales únicas y soluciones tecnológicas innovadoras. Mi pasión por la programación comenzó durante mis estudios en Ingeniería de sistemas, y desde entonces he estado en constante evolución, aprendiendo nuevas tecnologías y mejorando mis habilidades.
+                Con más de 1 año de experiencia en desarrollo web, me apasiona crear experiencias digitales únicas y soluciones tecnológicas innovadoras. Siempre estoy en constante evolución, aprendiendo nuevas tecnologías y mejorando mis habilidades.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Me destaco por mi capacidad para transformar ideas complejas en soluciones elegantes y eficientes. Mi enfoque se centra en crear productos que no solo cumplan con los requisitos técnicos, sino que también proporcionen una experiencia excepcional al usuario.
+                Mi enfoque se centra en crear productos que no solo cumplan con los requisitos técnicos, sino que también proporcionen una experiencia excepcional al usuario.
               </p>
               <div className="flex flex-wrap gap-3 mt-6">
                 {[
@@ -840,7 +829,7 @@ function App() {
               
               {/* Contact Form */}
               <div className="space-y-6">
-                <h3 className="text-2xl font-semibold text-teal-400">Envíame un Mensaje</h3>
+                <h3 className="text-2xl font-semibold text-teal-400">Envíame un correo</h3>
                 
                 <form ref={formRef} onSubmit={handleSendEmail} className="space-y-4">
                   <motion.div
