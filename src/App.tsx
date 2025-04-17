@@ -2,7 +2,7 @@ import favicon from "src/Components/logoinicial.svg";
 import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, Github, Linkedin, Mail, ChevronDown, Code, Briefcase, User, Coffee, Star, ExternalLink, Quote, Download, Phone, ArrowUp, MessageCirclePlus, MessageSquarePlus  } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MapPin, Twitter, MessageSquare, PenLine, Send } from 'lucide-react';
+import { MapPin,  PenLine, Send } from 'lucide-react';
 import { 
   SiHtml5, 
   SiCss3, 
