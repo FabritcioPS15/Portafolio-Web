@@ -1,8 +1,13 @@
-import favicon from "src/Components/logoinicial.svg";
+import favicon from "./Components/logoinicial.svg";
 import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, Github, Linkedin, Mail, ChevronDown, Code, Briefcase, User, Coffee, Star, ExternalLink, Quote, Download, Phone, ArrowUp, MessageCirclePlus, MessageSquarePlus  } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin,  PenLine, Send } from 'lucide-react';
+import ssctt from './Components/ssctt.png';
+import rtpsancristobal from './Components/rtpsancristobal.png';
+import iconcustomer from './Components/iconcustomer.png';
+import logo from './Components/logofjpsblanco.svg';
+
 import { 
   SiHtml5, 
   SiCss3, 
@@ -121,14 +126,14 @@ function App() {
     {
       title: "Portal de TalenThree",
       description: "TalentThre es una plataforma web enfocada en ofrecer servicios de asesoría y capacitación online. A través de un entorno accesible y profesional, brindamos cursos especializados y acompañamiento personalizado, diseñados para fortalecer las habilidades y competencias de nuestros usuarios, impulsando su desarrollo personal y profesional.",
-      image: "src/Components/ssctt.png",
+      image: ssctt,
       tech: ["WordPress", "WooComercee", "PHP"],
       featured: true
     },
     {
       title: "Portal de RTP San Cristóbal",
       description:"Web enfocada en la empresa RTP San Cristóbal, con un diseño moderno y funcionalidad intuitiva",
-      image: "src/Components/rtpsancristobal.png",
+      image: rtpsancristobal,
       tech: ["JavaScript", "HTML", "CSS","Python"],
       featured: true
     },
@@ -145,19 +150,19 @@ function App() {
     {
       name: "José Zelada",
       role: "Socio, TalentThree",
-      image: "src/Components/iconcustomer.png",
+      image: iconcustomer,
       content: "Un desarrollador excepcional. Su atención al detalle y creatividad son incomparables."
     },
     {
       name: "Carlos Quispe",
       role: "Gerente General, Grupo San Cristóbal",
-      image: "src/Components/iconcustomer.png",
+      image: iconcustomer,
       content: "La capacidad para resolver problemas complejos y entregar soluciones precisas ha sido fundamental para nuestro éxito."
     },
     {
       name: "Roman Reto",
       role: "Fundador, SparkTree Studio",
-      image: "src/Components/iconcustomer.png",
+      image: iconcustomer,
       content: "Un profesional que combina perfectamente habilidades técnicas con una excelente capacidad de comunicación."
     }
   ];
@@ -259,8 +264,8 @@ function App() {
     <div className="flex items-center space-x-2">
       {/* Logo más pequeño */}
       <motion.img
-        src="src/Components/logofjpsblanco.svg"
-        alt="Logo"
+  src={logo}  // Usa la importación
+  alt="Logo"
         className="h-6 w-6 md:h-8 md:w-8 object-contain"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ 
